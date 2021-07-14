@@ -5,21 +5,13 @@ namespace :dev do
   task setup: :environment do
     if Rails.env.development?
 
-      show_spinner('Deletando banco', 'Apagou papai !') do
-        `rails db:drop`
-      end
+      show_spinner('Deletando banco', 'Apagou papai !') { `rails db:drop` }
 
-      show_spinner('Criando banco', 'Criou papai !') do
-        `rails db:create`
-      end
+      show_spinner('Criando banco', 'Criou papai !') { `rails db:create` }
 
-      show_spinner('Migrando tabelas', 'Migrou papai !') do
-        `rails db:migrate`
-      end
+      show_spinner('Migrando tabelas', 'Migrou papai !') { `rails db:migrate` }
 
-      show_spinner('Populando banco', 'Populou papai !') do
-        `rails db:seed`
-      end
+      show_spinner('Populando banco', 'Populou papai !') { `rails db:seed` }
 
     else
       puts 'Não está em dev !'
