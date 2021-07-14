@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  api:
+    container_name: crypto_wallet
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
