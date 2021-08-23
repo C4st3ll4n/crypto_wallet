@@ -11,10 +11,9 @@ namespace :dev do
 
       show_spinner('Migrando tabelas', 'Migrou papai !') { `rails db:migrate` }
 
-      `rails dev:add_coins`
-
       `rails dev:add_minig_types`
 
+      `rails dev:add_coins`
     else
       puts 'Não está em dev !'
     end
@@ -38,17 +37,20 @@ namespace :dev do
       {
         description: 'Bitcoin',
         acronym: 'BTC',
-        url_image: 'https://img1.gratispng.com/20171220/shw/bitcoin-png-5a3a270236e2a5.49737455151376051422485643.jpg'
+        url_image: 'https://img1.gratispng.com/20171220/shw/bitcoin-png-5a3a270236e2a5.49737455151376051422485643.jpg',
+        mining_type: MiningType.find_by(acronym: 'PoW')
       },
       {
         description: 'Etherium',
         acronym: 'ETH',
-        url_image: 'https://img1.gratispng.com/20180516/ouw/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9b20d86.8643914515265041217293.jpg'
+        url_image: 'https://img1.gratispng.com/20180516/ouw/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9b20d86.8643914515265041217293.jpg',
+        mining_type: MiningType.find_by(acronym: 'PoS')
       },
       {
         description: 'Dash',
         acronym: 'DSH',
-        url_image: 'https://w7.pngwing.com/pngs/37/123/png-transparent-dash-bitcoin-cryptocurrency-digital-currency-logo-bitcoin-blue-angle-text.png'
+        url_image: 'https://w7.pngwing.com/pngs/37/123/png-transparent-dash-bitcoin-cryptocurrency-digital-currency-logo-bitcoin-blue-angle-text.png',
+        mining_type: MiningType.find_by(acronym: 'PoC')
       }
     ]
 
