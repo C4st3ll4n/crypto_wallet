@@ -1,0 +1,31 @@
+pt-BR:
+  locale: Português do Brasil
+  hello: Fala mundão
+  links:
+    edit: Editar
+    show: Mostrar
+    delete: Deletar
+  activerecord:
+    models:
+      coin:
+        one: Moeda
+        other: Moedas
+      minig_type:
+        one: Tipo de Mineração
+        other: Tipos de Mineração
+    attributes:
+      coin:
+        id: Código
+        minig_type: Tipo de Mineração
+        minig_type_id: ID do Tipo de Mineração
+        description: Descrição
+        acronym: Sigla
+        url_image: URL da imagem
+        updated_at: Atualizado em
+        created_at: Criado em
+      minig_type:
+        id: Código
+        description: Descrição
+        acronym: Sigla
+        updated_at: Atualizado em
+        created_at: Criado em

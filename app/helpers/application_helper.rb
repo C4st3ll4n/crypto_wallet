@@ -1,15 +1,18 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
-  def brazilian_day(data)
-    data.strftime("%d/%m/%Y")
-  end
 
   def rails_env
     if Rails.env.development?
-      "Desenvolvimento"
+      'Desenvolvimento'
     elsif Rails.env.production?
-      "Produção"
+      'Produção'
     else
-      "Teste"
+      'Teste'
     end
+  end
+
+  def locale
+    I18n.locale == :en ? 'USA' : 'BRBRBRBRBR'
   end
 end

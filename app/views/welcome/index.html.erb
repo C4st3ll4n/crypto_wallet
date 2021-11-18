@@ -1,6 +1,17 @@
-<p>Data: <%= brazilian_day(Date.today) %></p>
+<p>
+  <%= link_to "PT BR", root_path(lng: 'pt-BR') %>
+</p>
+
+<p>
+  <%= link_to "EN ENG", root_path(lng: 'en') %>
+</p>
+
+<p>Lang: <%= t('locale') %></p>
+<p>Data: <%= l(Date.today) %></p>
+
+<p><%= t('hello') %></p>
 
 <%=render "menu" %>
 <p>
-  Você está hein <%= rails_env %>
+  Você está em <%= rails_env %>
 </p>

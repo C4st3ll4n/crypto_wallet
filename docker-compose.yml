@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  api:
+  app:
     container_name: crypto_wallet
     build: .
     ports:
