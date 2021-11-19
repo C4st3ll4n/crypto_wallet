@@ -3,32 +3,43 @@ pt-BR:
   hello: Fala mundão
   welcome: Seja bem vindo
   description: Esse é o Crypto Wallet, suas cripto moedas ficão salvas aqui !
-  chose: Escolha uma das opções
+  messages:
+    chose: Escolha uma das opções
+    confirm_delete: Você tem certeza ?
+    new_coin: Nova moeda
+    new_minig: Novo Tipo de mineração
   links:
     edit: Editar
     show: Mostrar
     delete: Deletar
+    back: Voltar
   activerecord:
     models:
       coin:
         one: Moeda
         other: Moedas
-      minig_type:
+      mining_type:
         one: Tipo de Mineração
         other: Tipos de Mineração
     attributes:
       coin:
         id: Código
-        minig_type: Tipo de Mineração
-        minig_type_id: ID do Tipo de Mineração
+        mining_type: Tipo de Mineração
+        mining_type_id: ID do Tipo de Mineração
         description: Descrição
         acronym: Sigla
         url_image: URL da imagem
         updated_at: Atualizado em
         created_at: Criado em
-      minig_type:
+      mining_type:
         id: Código
         description: Descrição
         acronym: Sigla
         updated_at: Atualizado em
         created_at: Criado em
+  mining_type:
+    editing: "Editando Tipo de mineração"
+    new: "Novo Tipo de mineração"
+  coin:
+    editing: "Editando Moeda"
+    new: ""

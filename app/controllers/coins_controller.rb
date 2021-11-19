@@ -1,7 +1,7 @@
 class CoinsController < ApplicationController
   # layout "backoffice"
   before_action :set_coin, only: %i[ show edit update destroy ]
-  before_action :set_minig_type_options, only: [:new, :edit, :update, :create]
+  before_action :set_mining_type_options, only: [:new, :edit, :update, :create]
   after_action :putsGrila, only: %i[show edit]
 
   # GET /coins or /coins.json
@@ -67,7 +67,7 @@ class CoinsController < ApplicationController
 
   private
 
-  def set_minig_type_options
+  def set_mining_type_options
     @mining_type_options = MiningType.all.pluck(:description, :id)
   end
 

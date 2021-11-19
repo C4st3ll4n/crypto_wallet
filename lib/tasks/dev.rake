@@ -11,7 +11,7 @@ namespace :dev do
 
       show_spinner('Migrando tabelas', 'Migrou papai !') { `rails db:migrate` }
 
-      `rails dev:add_minig_types`
+      `rails dev:add_mining_types`
 
       `rails dev:add_coins`
     else
@@ -61,7 +61,7 @@ namespace :dev do
   end
 
   desc "Cadastra alguns tipos de minerações no banco de dados"
-  task add_minig_types: :environment do
+  task add_mining_types: :environment do
 
     mining_types = [{ description: 'Proof of Work', acronym: 'PoW' }, { description: 'Proof of Stake', acronym: 'PoS' },
                     { description: 'Proof of Capacity', acronym: 'PoC' },]

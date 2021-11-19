@@ -3,16 +3,27 @@ en:
   welcome: Welcome
   hello: Hello world
   description: Crypto Wallet, where you can trust yours crypto coins
-  chose: Pick one of the choices
+  messages:
+    chose: Pick one of the choices
+    confirm_delete: Are you sure ?
+    new_coin: New coin
+    new_minig: New Minig Type
   links:
     edit: Edit
     show: Show
     delete: Delete
+    back: Back
   activerecord:
     models:
       coin:
         one: Coin
         other: Coins
-      minig_type:
+      mining_type:
         one: Mining Type
         other: Mining Types
+  mining_type:
+    editing: "Editing Mining Type"
+    new: "New Mining type"
+  coin:
+    editing: "Editing Coin"
+    new: "New Coin"
