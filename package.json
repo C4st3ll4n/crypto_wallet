@@ -1,5 +1,14 @@
 {
   "name": "crypto_wallet",
-  "private": true,
-  "dependencies": {}
+  "private": false,
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "notify-js-legacy": "^0.4.1"
+  },
+  "version": "1.0.0",
+  "description": "cry",
+  "main": "index.js",
+  "repository": "https://github.com/C4st3ll4n/crypto_wallet.git",
+  "author": "Pedro",
+  "license": "MIT"
 }
