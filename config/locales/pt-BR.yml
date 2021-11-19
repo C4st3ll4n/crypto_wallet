@@ -1,6 +1,9 @@
 pt-BR:
   locale: Português do Brasil
   hello: Fala mundão
+  welcome: Seja bem vindo
+  description: Esse é o Crypto Wallet, suas cripto moedas ficão salvas aqui !
+  chose: Escolha uma das opções
   links:
     edit: Editar
     show: Mostrar

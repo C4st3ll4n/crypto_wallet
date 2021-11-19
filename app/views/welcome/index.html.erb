@@ -1,17 +1,9 @@
-<p>
-  <%= link_to "PT BR", root_path(lng: 'pt-BR') %>
-</p>
+<div class="mt-4 p-5 bg-dark text-white rounded">
 
-<p>
-  <%= link_to "EN ENG", root_path(lng: 'en') %>
-</p>
+  <h1 class="display-4"><%= t('welcome') %></h1>
 
-<p>Lang: <%= t('locale') %></p>
-<p>Data: <%= l(Date.today) %></p>
-
-<p><%= t('hello') %></p>
-
-<%=render "menu" %>
-<p>
-  Você está em <%= rails_env %>
-</p>
+  <p class="lead"><%= t('description') %></p>
+  <hr class="my-4">
+  <p><%= t('chose') %>:</p>
+  <%=render('welcome/menu') %>
+</div>

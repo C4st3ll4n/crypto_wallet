@@ -13,6 +13,6 @@ module ApplicationHelper
   end
 
   def locale
-    I18n.locale == :en ? 'USA' : 'BRBRBRBRBR'
+    I18n.locale == :en ? 'ENGLISH' : 'PORTUGUES'
   end
 end

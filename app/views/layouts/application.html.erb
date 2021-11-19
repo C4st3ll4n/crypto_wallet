@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CryptoWallet</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="pt-BR">
+<head>
+  <title>CryptoWallet</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+</head>
 
-  </head>
+<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-light">
+    <form class="container-fluid justify-content-end">
+      <button class="btn me-2" type="button">
+        <%=
+          if I18n.locale == :en
+            link_to "Português do Brasil", root_path(lng: 'pt-BR'), class: "nav-link"
+          else
+            link_to "USA English", root_path(lng: 'en'), class: "nav-link"
+          end
+        %>
+      </button>
 
-  <body>
-    <%= yield %>
-  <%=render "layouts/menu" %>
+    </form>
+  </nav>
+  <%= yield %>
+</div>
 
-  </body>
+</body>
 </html>
